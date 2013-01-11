@@ -1,0 +1,18 @@
+#conteudo
+{
+	float: right;
+	width: 727px;
+	height: 1%;
+	min-height: 400px;
+	background: #fff;
+	border-width: 7px;	
+	border-style: solid;
+	border-color: #696969;
+	border-left-color: #696969;
+	border-right-color: #000;
+	position: relative;
+	display: inline;
+	margin: 0 0 0 0;
+	z-index: -1;
+
+}

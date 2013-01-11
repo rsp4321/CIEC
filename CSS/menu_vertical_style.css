@@ -1,0 +1,33 @@
+#divmenuv {
+    width:160px;
+    min-height: 170px;
+    border: 2px solid green;
+}
+#menuv {
+	background: #333;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width:150px;
+    
+}
+#menuv li {
+	font: 90% arial, hevetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+#menuv a {
+	background: #333;
+	border-bottom: 2px solid #393939;
+	color: #ccc;
+	display: block;
+	margin: 0;
+	padding: 8px 12px;
+	text-decoration: none;
+}
+#menuv a:hover {
+	background: #42c555; /*url("images/hover.gif") left center no-repeat*/
+	color: #fff;
+	padding-bottom: 8px;
+}

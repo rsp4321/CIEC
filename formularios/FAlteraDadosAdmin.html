@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Alterar Dados</title>
+  <!--
+	-->
+	<style type="text/css">
+	@import url(cssForm/style_form.css);
+	</style>
+       <script src='valida.js' type='text/javascript'></script>
+  </head>
+
+<body bgcolor='white'>
+
+
+<form name='FAlteraDadosAdmin' method='POST' action='CAdmin.class.php?acao=altera_dados' onsubmit='return validaFPreCadastro();'>
+  <div>
+  <table id="todoform" cellspacing='5' rules='none'border="0">
+    <tr>
+        <td colspan="2"><div id="titulo">Alteração de Dados</div></td>
+    </tr>
+    <tr>
+      <td>Login</td>
+      <td><input name='login' id='login' type='text' size='50'></td>
+    </tr>
+    <tr>
+      <td>Senha</td>
+      <td><input name='senha' id='senha' type='password' size='20'></td>
+    </tr>
+    <tr>
+      <td>Nova Senha</td>
+      <td><input name='nvsenha' id='nvsenha' type='password' size='20'></td>
+    </tr>
+    <tr>
+      <td>Repita a Senha</td>
+      <td><input name='nvsenha2' id='nvsenha2' type='password' size='20'></td>
+    </tr>
+    <tr>
+	 <td colspan="2">
+  		<div align="center"><input class="botao" type="submit" value="Alterar" ></div>
+  	</td>
+   </tr>
+  </table>
+  </div>
+  </form>
+  </body>
+</html>
+
+<script language="JavaScript" >
+function validaFPreCadastro(){
+    form = document.FAlteraDadosAdmin;
+
+    if(form.login.value == ""){
+        alert('LOGIN EM BRANCO');
+        form.login.focus();
+        return false;}
+
+    if(form.senha.value == ""){
+        alert('SENHA EM BRANCO');
+        form.senha.focus();
+        return false;}
+
+    if(form.nvsenha.value == ""){
+        alert('DIGITE UMA NOVA SENHA');
+        form.nvsenha.focus();
+        return false;}
+
+     if(form.nvsenha2.value == ""){
+        alert('REPITA A NOVA SENHA');
+        form.nvsenha2.focus();
+        return false;}
+
+    if(form.nvsenha.value != form.nvsenha2.value){
+        alert('NOVAS SENHAS NAO CONFEREM');
+        form.nvsenha2.focus();
+        return false;}
+
+    return true;
+}
+</script>

@@ -1,0 +1,103 @@
+/*versões anteriores ao IE7 não aceitam o seletor */
+body
+{
+	margin: 0;
+	padding: 0;
+	background: #202020; /*cinza claro*/
+	min-height: 100%;
+}
+
+#cabecalho { 
+	background:  #202020;
+	width: 985px; 
+	top: 0px; 
+	border-bottom: 1px solid;
+}
+
+/*img#mec {width: 985px; height: 36px; }*/
+img#ifet {
+    width: 985px; 
+    height: 175px; 
+    background:  #202020;
+}	
+
+#menuPrincipal { background: #BEBEBE; }
+
+#recipiente
+{
+	margin: 1em auto;
+	bottom: 10px;
+	width: 985px;
+	min-height: 780px;
+	background: #98FB98;/**/
+	position: relative;
+	border: #1C1C1C;
+	
+	border: 0px solid green;
+	
+}
+
+.conteudo{
+	float: right;
+	width: 745px;
+	height: 100%;
+	min-height: 500px;
+	background: #ffffff;
+	border-width: 2px;	
+	border-style: solid;
+	/*border-color:#696969 ; borda #696969*/
+	border-left-color: #696969; /*borda #696969*/
+	border-right-color: #696969; /*borda #000000*/
+	position: relative;
+	margin: 6px 10px 7px 0; /*top right bottom left - distancia do conteudo ate o menu*/
+	font: 100% arial, hevetica, sans-serif;
+	color: #000000;
+	border:#000000;
+	border: 2px solid #2E8B57;
+
+	
+}
+
+*div .conteudo {padding-bottom: 0px;} 
+
+/*-----------------------*/
+
+#rodape {
+	
+	clear: both;
+	color: #ffffff;
+	font-size: 13px;
+	font-family:Arial;
+	background: #000000;
+	border-top: 0px solid #999999;
+	/*margin: 1em auto; não é necessário*/
+	margin-top: 4em auto;
+	position:relative;
+	padding: 1px;
+	line-height: 0px;
+	
+}
+
+#info {
+    background: #cafdb2;
+    font-size: 15px;
+    font: arial, hevetica, sans-serif;
+    border: 2px solid #caffa1;
+    margin: 50px 50px 7px 50px; /*top right bottom left - distancia do conteudo ate o menu*/
+        
+}
+
+#t {
+    border: 1px;
+    /*text-decoration: blink;*/
+}
+
+#tituloContato {
+	font-size: 16px;
+	font-style: inherit;
+	font-family:inherit;
+	text-align: center;
+	background:;
+/*	margin: 10px 130px 0 100px; */
+
+}

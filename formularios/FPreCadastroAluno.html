@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>FPreCadastroAluno</title>
+  <!--
+	-->
+	<style type="text/css">
+	@import url(cssForm/style_form.css);
+	</style>
+  </head>
+  
+<body bgcolor='white'>
+
+	  
+
+<form name='FPreCadastro' method='POST' action='CAdmin.class.php?acao=pre_cadastro' onsubmit='return validaFPreCadastro();'>
+  <div>
+  <table id="todoform" cellspacing='5' rules='none'border="0">
+	<tr>
+        <td colspan="2"><div id="titulo">Cadastro de Ex-Alunos</div></td>
+    </tr>
+    <tr>
+      <td>Nome:</td>
+      <td><input name='nome' id='nome' type='text' size='50'></td>
+    </tr>
+    <tr>
+      <td>CPF:</td>
+      <td><input name='cpf' id='cpf' type='text' maxlength='14' size='12' onkeypress="Mask('cpf',this);"></td>
+    </tr>  
+    <tr>
+	 <td colspan="2">
+  		<div align="center"><input class="botao" type="submit" value="Cadastrar" ></div>
+  	</td>
+   </tr>
+  </table>
+  </div>
+  </form>
+  </center>
+  </body>
+</html>	  
+    

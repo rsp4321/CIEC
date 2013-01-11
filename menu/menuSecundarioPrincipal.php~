@@ -1,0 +1,10 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+</head>	
+	<ul id="imagem">
+		 <li><a href="index.php?acao_menu=cadastrar_aluno&acao=fcadastrar_aluno" title="adicionar" ><img src="menu/btn/cadastro.png" >Aluno</a></li> 
+	</ul>
+		
+</html>

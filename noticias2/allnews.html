@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.limit-1.2.source.js"></script>
+<script type="text/javascript">  
+/*
+ *
+*/
+$(document).ready(function(){
+	//$(".carregando").hide();
+	$("#erro").hide();
+	//
+	$("a").hover(
+  		function () {
+    		$(this).addClass("highlight");
+  		},
+  		function () {
+    		$(this).removeClass("highlight");
+  		}
+	);
+   	//			
+	function formataData(data){
+		var mes = new Array("Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"); // vetor de meses do ano
+	    var strSecundaria = data.split(' '); // explodindo em data e hora
+		var teste = strSecundaria[0].split('/'); // separando data 
+		var calendario = "<span class=\"data\"><span class=\"dia\">"+ teste[0] +"</span><span class=\"mes\">"+ mes[teste[1]-1] + "</span></span>"; //montando calendario
+		return calendario;
+	}
+	$.get("ajax/buscar.php", "function=3", function(json){
+					var msg;
+					var classe;
+					msg = "<ul>";	
+        			//					
+					for (var i = 0; i < json.length; i++) {
+						 //colorindo as noticias de cores diferentes
+						 if(json[i][0] % 2 == 0){
+							 classe = "par";
+						 }else{ classe = "impar"; }
+						 //
+						 msg += "<a href=\"completo.php?nid=" + json[i][0] + "\" target=\"_blanc\" title=\"clique aqui para ver mais\">";
+						 msg +=  "<li class=\""+  classe +"\">";
+                    	 //msg += "<span class=\"data\">" + formataData(json[i][3]) + "</span>"; // data
+						 msg += formataData(json[i][3]); // data
+						 msg += "<span class=\"titulo\"><h1>" + json[i][1] + "</h1></span>"; // titulo
+						 msg += "<span class=\"resumo\">" + json[i][2] + "</span>"; // resumo
+						 msg += "</li>";
+						 msg += "</a>";
+					}
+					msg += "</ul>";	
+                   	// colocar dentro de manchetes
+					$("#manchetes").html(msg).fadeIn("slow");
+	},"json");
+});
+</script>
+<style type="text/css"> @import url(css/style.css); </style>
+<title>News IFET</title>
+</head>
+
+<body>
+    <div class="spacer3"></div>
+	<div id="news">
+    	<span id="carregando">Notícias</span>
+        <span id="erro">whoops, ocorreu um erro :(</span>
+        <div id="manchetes"></div>
+        <span class="ver-todos"></span>
+    </div>
+    <div class="spacer3"></div>
+</body>
+</html>

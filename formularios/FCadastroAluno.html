@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <title>Formúlário de CadastroAluno</title>
+    <!--
+    <
+	-->
+	<style type="text/css">
+	@import url(cssForm/style_form.css);
+	</style>
+<script type="text/javascript">
+function validaFCadastroAluno(){
+   form = document.FCadastroAluno;
+	if(form.nome.value == ""){
+        alert('Preencha o Nome');
+        form.nome.focus();
+        return false;}
+
+    if (form.cpf.value == ""){
+        alert('Preencha o CPF');
+        form.cpf.focus();
+        return false;
+        }
+        
+    if (form.login.value==""){
+        alert('Digite seu login');
+        form.login.focus();
+        return false;}  
+        
+    if (form.senha.value==""){
+        alert('Digite uma Senha');
+        form.senha.focus();
+        return false;}
+		
+	if (form.senha.value != form.senhaconf.value){
+        alert('As senhas digitadas não conferem');
+        form.senhaconf.value ="";
+        form.senhaconf.focus();
+        return false;}  
+	
+	if (form.rua.value==""){
+        alert('Rua em Branco');
+        form.rua.focus();
+        return false;}		    
+   
+   if (form.numero.value==""){
+        alert('Numero em Branco');
+        form.numero.focus();
+        return false;}	
+        
+   if (form.bairro.value==""){
+        alert('Bairro em Branco');
+        form.bairro.focus();
+        return false;}	   
+		
+	if (form.cidade.value==""){
+        alert('Cidade em Branco');
+        form.cidade.focus();
+        return false;}
+		
+	if (form.estado.value==""){
+       alert('Estado em Branco');
+        form.estado.focus();
+        return false;}		
+		
+	if (form.cep.value==""){
+        alert('CEP em Branco');
+        form.cep.focus();
+        return false;}			  
+   
+    return  true;
+ }
+</script>
+  </head>
+  
+<body bgcolor='white'>
+  <form name='FCadastroAluno' method='post' action="CUsr.class.php?acao=cadastrar_aluno" onsubmit="return validaFCadastroAluno();">
+  <div>
+    <table id="todoform" cellspacing='5' rules='none' border="0">
+        <tr>
+  	      <td colspan="2" ><div id="titulo">Cadastro de Egressos</div></td>
+        </tr>
+        <tr>
+  	      <td colspan="2" ><strong>Dados Gerais</strong></td>
+        </tr>
+        <tr>
+          <td>Nome</td>
+          <td><input name='nome' id='nome' type='text' size='70'></td>
+        </tr>
+        <tr>
+          <td>CPF</td>
+          <td><input name='cpf' id='cpf' type='text' maxlength='14' size='14' onKeyPress="Mask('cpf',this)"></td>
+        </tr>  
+        <tr>
+          <td>Email</td>
+          <td><input name='email' id='email' type='text' size='50' maxlength='50'></td>
+        </tr>
+        <tr>
+          <td>Login</td>
+          <td><input name='login' id='login' type='text' size='25'></td>
+        </tr>
+        <tr>
+          <td>Senha</td>
+          <td><input name='senha' id='senha' type='password' size='25'></td>
+        </tr>
+        <tr>
+          <td>Confirmar Senha</td>
+          <td><input name='senhaconf' id='senhaconf' type='password' size='25'></td>
+        </tr> 
+          <tr><br></tr>   
+          <tr><td colspan="2"><strong>Endereço</strong></td></tr>
+        <tr>
+          <td>Rua</td>
+          <td><input name='rua' type='text' size='80'></td>
+        </tr>
+        <tr>
+          <td>Número</td>
+          <td><input name='numero' type='text' maxlength='5'></td>
+        </tr> 
+	   <tr>
+          <td>Complemento</td>
+          <td><input name='complemento' type='text' maxlength='15'></td>
+       </tr>  
+        <tr>
+          <td>Bairro</td>
+          <td><input name='bairro' type='text' size='70'></td>
+        </tr>
+        <tr>
+          <td>Cidade</td>
+          <td><input name='cidade' type='text' size='50'></td>
+        </tr>
+        <tr>
+          <td>Estado</td>
+          <td><select name='estado'>
+              <option value="">estado</option>
+              <option value='AC'>AC</option>
+           	  <option value='AL'>AL</option>
+              <option value='AP'>AP</option>
+              <option value='AM'>AM</option>
+              <option value='BA'>BA</option>
+              <option value='CE'>CE</option>
+              <option value='DF'>DF</option>
+              <option value='GO'>GO</option>
+              <option value='ES'>ES</option>
+              <option value='MA'>MA</option>
+              <option value='MT'>MT</option>
+              <option value='MS'>MS</option>
+              <option value='MG'>MG</option>
+              <option value='PA'>PA</option>
+              <option value='PB'>PB</option>
+              <option value='PR'>PR</option>
+              <option value='PE'>PE</option>
+              <option value='PI'>PI</option>
+              <option value='RJ'>RJ</option>
+              <option value='RN'>RN</option>
+              <option value='RS'>RS</option>
+              <option value='RO'>RO</option>  
+              <option value='RR'>RR</option>
+              <option value='SP'>SP</option>
+              <option value='SC'>SC</option>
+              <option value='SE'>SE</option>
+              <option value='TO'>TO</option></select>
+          </td>
+       </tr>
+       <tr>
+         <td>CEP</td>
+         <td><input name='cep' type='text' size='8' maxlength="8"><i>Somente Números</i></td>
+       </tr>   
+	   <tr>
+         <td colspan="2">
+         <div align="center"><span id="botao"><input id="botao"  type="submit" value="Cadastrar" ></span> </div>
+  	     </td>
+       </tr>
+  </table>  
+  </div>
+  </form>
+  </body>
+</html>	  
+    

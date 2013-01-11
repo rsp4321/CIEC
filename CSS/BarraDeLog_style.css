@@ -1,0 +1,103 @@
+.barra {
+padding:0; 
+margin:0;
+position:relative; 
+list-style:none; 
+width: 984px;
+height:24px; 
+display:inline-block;
+font-size:.7em;
+font-family:Verdana,Helvetica,Arial,sans-serif;
+background: url(../imagens/barra_log.png) repeat-x top left;
+border:1px solid #D3D3D3;
+}
+
+.barra li:first-child  {
+display:block; 
+float:right; 
+position:relative;
+margin:-6px 8px 0 0;
+}
+
+.barra li  {
+z-index:1;
+line-height:24px; 
+display:block; 
+float:left; 
+position:relative;
+margin:-6px 10px 0 0;
+padding-left:4px;
+text-decoration: none;
+}
+
+.barra li a:first-child  {
+display:block; 
+float:left; 
+height:24px; 
+line-height:33px; 
+color:#000000; 
+text-decoration:none; 
+font-size:11px; 
+font-weight:bold; 
+padding:0 0 0 0px; 
+cursor:pointer;
+}
+
+.barra li a:hover,.current {
+color:#696969;
+text-decoration:underline;
+font-size: 11px;
+vertical-align: bottom;
+background: none;
+
+}
+
+
+.barra li a span {
+float:left; 
+font-weight:bold; 
+display:block; 
+padding:0 0 0 8px; 
+height:24px;
+}
+
+/*
+.barra table {
+border-collapse:collapse; 
+width:0; 
+height:0; 
+position:absolute; 
+top:0; 
+left:0;
+}
+
+.barra a:hover {
+background-color:#696969;
+visibility:visible;
+
+}
+.barra li:hover {
+position:relative; 
+z-index:200;
+}
+
+.barra ul, 
+.barra :hover ul ul, 
+.barra :hover ul :hover ul ul,
+.barra :hover ul :hover ul :hover ul ul,
+.barra :hover ul :hover ul :hover ul :hover ul ul {
+position:absolute; 
+
+width:0; 
+height:0; 
+margin:0; 
+padding:0; 
+list-style:none;
+
+/*
+left:-9999px; 
+top:-9999px; 
+}
+*/
+
+

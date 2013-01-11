@@ -1,0 +1,85 @@
+table{
+	border:1px;	
+}
+
+td{
+	font-size: 12px;
+	font-family:inherit;
+}
+tr + td {
+	font-size: 14px;
+	font-style: oblique;
+}
+
+#titulo {
+	font-size: 12px;
+    font-weight: bold;
+    color:black;
+	font-style: inherit;
+	font-family:inherit;
+	text-align: center;
+	border: 0px;
+	background: #cafdb2;
+	margin: 5px 100px 0 100px;
+
+} 
+
+#todoform {
+    margin-top:12px;
+    width: 630px;
+	margin-left:50px;
+  	background:#cafdb2; /* uma cor branca para o fundo do formulário */
+	font:12px arial, verdana, helvetica, sans-serif; /* o tamanho e o tipo da fonte no formulário */
+	border:2px solid #caffa1;
+	color:black; /* a cor preta para as letras */
+    
+}
+
+#todoform th {
+background:#000000; /* a cor
+preta para o fundo do título */
+padding:3px; /* um afastamento
+de 3px */
+font: bold 15px arial, verdana, helvetica, sans-serif; /*
+letras em negrito com 15px e familia arial, verd....*/
+border-bottom:1px solid silver; /*
+uma borda inferior solida de 1px na cor .. */
+} 
+
+#todoform input , select{
+background:; /* a cor do fundo dos campos */
+border:1px solid black ;  /*uma borda de 1px solida e na cor laranja para o campo */
+border-color: #D3D3D3;
+	
+	
+} 
+/*-------------------------------------------------------------------*/
+#formLogin {
+    azimuth: center;
+    width:200px;
+    height:130px;
+    font: 12px arial;
+    font-weight:bold; /*negrito*/
+    border: 2px solid #2E8B57;
+}
+
+body #formLogin{
+	background: #FFFFFF;
+	margin:2em auto;
+}
+
+form #formLogin{
+	background:#FFFFFF;	
+}
+
+table #formLogin{
+	margin-left: 0px;
+       
+}      
+
+#formLogin input, select{
+    background:white;
+    border:1px solid black ;  /*uma borda de 1px solida e na cor laranja para o campo */
+    border-color: #D3D3D3;
+}
+/*-------------------------------------------------------------------*/

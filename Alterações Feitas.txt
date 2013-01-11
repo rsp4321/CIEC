@@ -1,0 +1,20 @@
+Mudar a tabela pessoa_endereço, colocar o ex_aluno_id como unico
+
+Arrumei o Lista Dados
+
+Na tabela empresa colocar o cnpj como unico
+
+Criei o pesquisaEgressoEmpresa.php para pesquisa da empresa
+
+Alterei todos os formularios que permitiam mudar o login. O login nao deve ser alterado.
+
+Alterar o campo email da tabela experiencia de 20 para 50 de tamanho
+
+Noticias, cadastro, editar e excluir funcionando. formartar apenas as paginas.
+
+=======================================
+
+FAZER
+
+Trava para nao deixar cadastrar 2 curriculos
+E caso ja tiver curriculo dar a opcao de cadastrar mais formacao ou experiencia
